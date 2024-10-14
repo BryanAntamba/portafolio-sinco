@@ -1,0 +1,199 @@
+/* Tamaño del contenido de toda la pagina*/
+html {
+    font-size: 16px;
+}
+
+/*voy a usar mediasquery para hacer adaptable la letra a un dispositivo diferente*/
+@media screen and(max-width:400px) {
+    html {
+        font-size: 9.41176px;
+    }
+}
+
+/*Los elementos del heigth usaran el 100% de sus contenedores*/
+html,
+body {
+    height: 100%;
+}
+
+/*Se cambiara tanto el tipo de letra, tambien el color del fondo*/
+body {
+    background: #050505f6;
+    /*Seleccionar el tipo de letra en funcion al codio en base*/
+    font-family: 'Afacad+Flux', ;
+    /*La etiqueta rem va a coger el tamaño padre que es 16px y lo multiplicara por 1.7*/
+    font-size: 1.7rem;
+    font-style: normal;
+    /*Hace a la letra un poco mas ancha*/
+    font-weight: normal;
+    /*Es el ancho que existe entre los espacios de las palabras o sangria*/
+    line-height: 1.882;
+    color: black;
+    /*Le va a dar un margen desde el interior de un contenedor hacia el exterior*/
+    margin: 0;
+    /*Le va a dar un margen desde el exterior hacia el interior del contenedor*/
+    padding: 12px;
+}
+
+/*Estilos a los links*/
+a {
+    color: #cf1767;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Transicion de estilos para los links*/
+a:hover,
+/*Le genera un pequeño brillo*/
+a:focus,
+/**/
+a:active {
+    color: white;
+}
+
+/*Al poner el maus encima del link hacer que cambie el color*/
+a:hover,
+a:active {
+    outline: 0;
+}
+
+/*Tipografía*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Frank Ruh1 libre", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff;
+    /*Faltan 2 caracteristicas*/
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    /*Margen hacia arriba*/
+    margin-top: 6rem;
+    /*Margen hacia abajo*/
+    margin-bottom: 16rem;
+}
+
+/*Si el dispostivo tiene un tamaño mayor a 600 px hacer*/
+@media screen and(max-width:600px) {
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4 {
+        /*Margen hacia arriba*/
+        margin-top: 6rem;
+    }
+}
+/*Las etiquetas h5 y h6 estaran acompañadas de una clase cada una*/
+h5, .h5, h6, .h6{
+    /*esto es solo para dar estilos a las etiquetas h5 y h6*/
+    /*Le daremos un margen de 4.8rem y un margen de 1.2 rem*/
+    margin-top: 4.8rem;
+    margin-bottom: 1.2rem;
+}
+/*Estilos del header*/
+.s-header{
+    position: absolute;
+    /*De arriva para abajo*/
+    top: 2rem;
+    /*De derecha a la izquierda*/
+    right:0 ;
+    /*De izquierda a la derecha*/
+    left:0;
+    /*De abajo para arriva*/
+    bottom:0;
+    width: 100%;
+    border: 1px solid white;
+    height: 78px;
+    text-align: center;
+}
+/*Ingreso de una clase la cual me busque la clase llamada header.sticky*/
+/*color del contenedor*/
+/*posicion en forma de fixed*/
+.s-header.sticky{
+    background: #050505;
+    position: fixed;
+    /*Ubicacion de arriba del contenedor es cero*/
+    top: 0;
+    /*Ubicacion de izquiera del contenedor cero*/
+    left:0; 
+}
+.header-logo{
+    /*Lo que se tiene en el contenedor que esta en bloque lo transforme en linea*/
+    display: inline-block;
+    /*margen de 6 pixeles en alrededor del contenedor*/
+    margin: 6px 0 0 0;
+    /*El contenedor tendra una posicion absoluto*/
+    position: absolute;
+    /*Ubicacion de la imagen con un 50 porciento en la parte de arriba*/
+    top: 50%;
+    /*Ubicacion en la parte de la izquierda con una ubicacion de 40 pixeles*/
+    left: 40px;
+}
+/*ingresamos una clase la cual me busqye la clase logo*/
+.header-logo a{
+
+    display: block;
+    margin :0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    transition: all .3s;
+}
+.header-logo img{
+    width: 132px;
+    height: 36px;
+    margin: 0;
+}
+/*una clase con contenedores de forma de bloques*/
+.header-nav-wrap{
+    /*El display quitara el bloque de los contenedores de esta clase*/
+    display: inline-block;
+}
+/*Ingreo de otra clase y que busque la etiqueta ul*/
+.header-nav-wrap ul{
+    /*Les quitaremos los bloques*/
+    display: inline-block;
+    /*Que no tenga nada de estilos*/
+    list-style: none;
+    /*Tenga un margen de cero*/
+    margin-left: 0;
+    /*Y incremento de un margen top de 18 pixeles*/
+    margin-top: 18px;
+}
+/*Uso de una clase la cual me busque las etiquetas li*/
+.header-nav-wrap li{
+    /*Como son bloques la etiqueta li con inline se lo transforma de forma de lina*/
+    display: inline-block;
+    /*Ingreo de un padding de 0%*/
+    padding: 0;
+}
+/*Ingresamos otra clase la cual me busque las etiquetas li y la etiqueta a*/
+.header-nav-wrap li a{
+    /*Esta etiqueta esta en forma de linea*/
+    /*Se le tranformara en bloque*/
+    display: block;
+    /*Definimos el tamaño con una altura de 78 pixeles con una calculacion restando 18 pixeles por 2*/
+    /*78 pixeles sera restado por el resultado realizado dentro de los parentecis*/
+    line-height: calc(78px-(18px*2));
+}
